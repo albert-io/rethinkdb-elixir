@@ -5,8 +5,8 @@ defmodule RethinkDB.Mixfile do use Mix.Project
      version: "0.4.0",
      elixir: "~> 1.0",
      description: "RethinkDB driver for Elixir",
-     package: package,
-     deps: deps,
+     package: package(),
+     deps: deps(),
      test_coverage: [tool: ExCoveralls]]
   end
 
@@ -40,7 +40,7 @@ defmodule RethinkDB.Mixfile do use Mix.Project
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:poison, "~> 1.5 or ~> 2.0"},
+      {:poison, "~> 3.0.0"},
       {:earmark, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.7", only: :dev},
       {:flaky_connection, github: "hamiltop/flaky_connection", only: :test},
